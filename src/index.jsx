@@ -2,7 +2,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var List = require('./Components/List');
 
-// Our Board App
+// Our Board App for trello
 var Board = React.createClass({
   getInitialState: function () {
     return {
