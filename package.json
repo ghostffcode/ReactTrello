@@ -1,0 +1,23 @@
+{
+  "name": "trelloreact",
+  "version": "1.0.0",
+  "description": "Trello-like App Using React",
+  "main": "src/index.jsx",
+  "scripts": {
+    "start": "webpack"
+  },
+  "dependencies": {
+    "react": "^15.2.0",
+    "react-dom": "^15.2.0",
+    "bootstrap": "^3.3.7"
+  },
+  "devDependencies": {
+    "webpack": "^1.13.1",
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1"
+  },
+  "author": "Chimeremeze Ukah <http://ghostffco.de>",
+  "license": "MIT"
+}
