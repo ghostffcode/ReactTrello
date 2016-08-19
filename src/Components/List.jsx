@@ -27,7 +27,7 @@ module.exports = React.createClass({
     }
     return (
       <div className="col-md-3 col-sm-4 col-xs-4">
-        <section className="list col-md-12 col-xs-12">
+        <section className="list col-md-12 col-sm-12 col-xs-12">
           <header>{this.props.name}</header>
             {cards}
           <article className="card">
