@@ -8,8 +8,7 @@
   },
   "dependencies": {
     "react": "^15.2.0",
-    "react-dom": "^15.2.0",
-    "bootstrap": "^3.3.7"
+    "react-dom": "^15.2.0"
   },
   "devDependencies": {
     "webpack": "^1.13.1",
