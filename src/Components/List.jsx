@@ -8,13 +8,12 @@ module.exports = React.createClass({
     }
   },
   AddCard: function (e) {
-    var header = e.target.value;
-    if (e.keyCode == 13 || e.which == 13) {
-      this.setState({
-        List: this.state.cards.push({"header": header})
-      });
-      e.target.value = '';
-    }
+    e.preventDefault();
+    var header = e.target.cardVal.value;
+    this.setState({
+      List: this.state.cards.push({"header": header})
+    });
+    e.target.cardVal.value = '';
   },
   render: function () {
     var cards = [];
@@ -31,7 +30,9 @@ module.exports = React.createClass({
           <header>{this.props.name}</header>
             {cards}
           <article className="card">
-            <input type="text" onKeyUp={this.AddCard} className="form-control" placeholder="Add Card..." />
+            <form action="#" onSubmit={this.AddCard}>
+              <input type="text" className="form-control" id="cardVal" placeholder="Add Card..." />
+            </form>
           </article>
         </section>
       </div>
