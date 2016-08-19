@@ -10,13 +10,12 @@ var Board = React.createClass({
     }
   },
   AddBoard: function (e) {
-    var name = e.target.value;
-    if (e.keyCode == 13 || e.which == 13) {
-      this.setState({
-        List: this.state.list.push({"name": name})
-      });
-      e.target.value = '';
-    }
+    e.preventDefault();
+    var name = e.target.nBoard.value;
+    this.setState({
+      List: this.state.list.push({"name": name})
+    });
+    e.target.nBoard.value = '';
   },
   render: function() {
       var list = [];
@@ -30,7 +29,9 @@ var Board = React.createClass({
       return (
           <div className="row col-md-12 col-sm-12 col-xs-12">
             <div className="col-md-12 col-sm-12 col-xs-12 boardForm">
-                  <input type="text" onKeyUp={this.AddBoard} className="form-control newboard" placeholder="New Board..." />
+              <form action="#" onSubmit={this.AddBoard}>
+                  <input type="text" className="form-control newboard" autoComplete="off" id="nBoard" placeholder="New Board..." />
+              </form>
             </div>
             <div className="row col-md-12 col-sm-12 col-xs-12">
               {list}
