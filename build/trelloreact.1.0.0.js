@@ -50,7 +50,7 @@
 	var ReactDOM = __webpack_require__(35);
 	var List = __webpack_require__(175);
 	
-	// Our Board App
+	// Our Board App for trello
 	var Board = React.createClass({
 	  displayName: 'Board',
 	
